@@ -20,6 +20,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::controller(StageController::class)->prefix('stages')->group(function() {
-    Route::get('stage', 'index');
+    Route::get('', 'index');
 });
 

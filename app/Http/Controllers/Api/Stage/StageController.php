@@ -42,7 +42,7 @@ class StageController extends Controller
                                 ]
                             ]
                         ],
-                        "due_date" => "new Date(2023, 0, 1)",
+                        "due_date" => "14/02",
                         "attachments" => [
                             [
                                 "id" => "1",
@@ -54,7 +54,7 @@ class StageController extends Controller
                             [
                                 "id" => 1,
                                 "name" => "Tarefa 1",
-                                "due_date" => "new Date(2023, 2, 1)",
+                                "due_date" => "14/09",
                                 "assignee" => [
                                     "id" => 2,
                                     "email" => "usuario2@empresa.com",
@@ -69,7 +69,7 @@ class StageController extends Controller
                             [
                                 "id" => 2,
                                 "name" => "Tarefa 2",
-                                "due_date" => "new Date(2023, 2, 8)",
+                                "due_date" => "12/01",
                                 "assignee" => [
                                     "id" => 1,
                                     "email" => "usuario1@empresa.com",
@@ -109,7 +109,7 @@ class StageController extends Controller
                                 ]
                             ]
                         ],
-                        "due_date" => "new Date(2023, 0, 1)",
+                        "due_date" => "28/12",
                         "attachments" => [
                             [
                                 "id" => "1",
@@ -121,7 +121,7 @@ class StageController extends Controller
                             [
                                 "id" => 1,
                                 "name" => "Tarefa 1",
-                                "due_date" => "new Date(2023, 2, 1)",
+                                "due_date" => "23/01",
                                 "assignee" => [
                                     "id" => 2,
                                     "email" => "usuario2@empresa.com",
@@ -136,7 +136,7 @@ class StageController extends Controller
                             [
                                 "id" => 2,
                                 "name" => "Tarefa 2",
-                                "due_date" => "new Date(2023, 2, 8)",
+                                "due_date" => "18/01",
                                 "assignee" => [
                                     "id" => 1,
                                     "email" => "usuario1@empresa.com",
@@ -182,7 +182,7 @@ class StageController extends Controller
                                 ]
                             ]
                         ],
-                        "due_date" => "new Date(2023, 0, 1)",
+                        "due_date" => "29/04",
                         "attachments" => [
                             [
                                 "id" => "1",
@@ -194,7 +194,7 @@ class StageController extends Controller
                             [
                                 "id" => 1,
                                 "name" => "Tarefa 1",
-                                "due_date" => "new Date(2023, 2, 1)",
+                                "due_date" => "20/12",
                                 "assignee" => [
                                     "id" => 2,
                                     "email" => "usuario2@empresa.com",
@@ -209,7 +209,7 @@ class StageController extends Controller
                             [
                                 "id" => 2,
                                 "name" => "Tarefa 2",
-                                "due_date" => "new Date(2023, 2, 8)",
+                                "due_date" => "02/04",
                                 "assignee" => [
                                     "id" => 1,
                                     "email" => "usuario1@empresa.com",
@@ -249,7 +249,7 @@ class StageController extends Controller
                                 ]
                             ]
                         ],
-                        "due_date" => "new Date(2023, 0, 1)",
+                        "due_date" => "01/01",
                         "attachments" => [
                             [
                                 "id" => "1",
@@ -261,7 +261,7 @@ class StageController extends Controller
                             [
                                 "id" => 1,
                                 "name" => "Tarefa 1",
-                                "due_date" => "new Date(2023, 2, 1)",
+                                "due_date" => "31/01",
                                 "assignee" => [
                                     "id" => 2,
                                     "email" => "usuario2@empresa.com",
@@ -276,7 +276,7 @@ class StageController extends Controller
                             [
                                 "id" => 2,
                                 "name" => "Tarefa 2",
-                                "due_date" => "new Date(2023, 2, 8)",
+                                "due_date" => "11/11",
                                 "assignee" => [
                                     "id" => 1,
                                     "email" => "usuario1@empresa.com",
@@ -322,7 +322,7 @@ class StageController extends Controller
                                 ]
                             ]
                         ],
-                        "due_date" => "new Date(2023, 0, 1)",
+                        "due_date" => "30/02",
                         "attachments" => [
                             [
                                 "id" => "1",
@@ -334,7 +334,7 @@ class StageController extends Controller
                             [
                                 "id" => 1,
                                 "name" => "Tarefa 1",
-                                "due_date" => "new Date(2023, 2, 1)",
+                                "due_date" => "15/12",
                                 "assignee" => [
                                     "id" => 2,
                                     "email" => "usuario2@empresa.com",
@@ -349,7 +349,7 @@ class StageController extends Controller
                             [
                                 "id" => 2,
                                 "name" => "Tarefa 2",
-                                "due_date" => "new Date(2023, 2, 8)",
+                                "due_date" => "22/03",
                                 "assignee" => [
                                     "id" => 1,
                                     "email" => "usuario1@empresa.com",
