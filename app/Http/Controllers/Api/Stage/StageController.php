@@ -9,7 +9,7 @@ class StageController extends Controller
 {
     public function index(FilterStageRequest $request)
     {
-        $filters = $request->validated($request);
+        $filters = $request->validated();
 
         $stages = collect([
             [
@@ -367,16 +367,6 @@ class StageController extends Controller
             ]
         ]);
 
-
-        $filtered = $stages->filter(function ($item) use ($filters) {
-            $startupName = $item['applications'][0]['startup']['name'];
-            $score = $item['applications'][0]['score'];
-            $challengeId = $item['applications'][0]['challenge']['id'];
-            return $startupName === $filters['search'] ?? ''
-                && $score === $filters['score'] ?? ''
-                && $challengeId === $filters['challenge_id'] ?? '';
-        });
-
-        return $filtered->values()->all();
+        return $stages;
     }
 }
