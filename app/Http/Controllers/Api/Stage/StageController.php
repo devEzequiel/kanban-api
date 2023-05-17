@@ -11,7 +11,7 @@ class StageController extends Controller
     {
         $filters = $request->validated($request);
 
-        $stages = [
+        $stages = collect([
             [
                 'id' => 1,
                 "name" => "Primeira Etapa",
@@ -23,10 +23,10 @@ class StageController extends Controller
                             "name" => "Startup A"
                         ],
                         "challenge" => [
-                            "id" => 1,
-                            "name" => "Desafio B"
+                            "id" => 3,
+                            "name" => "Desafio 3"
                         ],
-                        "score" => 3.6,
+                        "score" => 4.0,
                         "assignee" => [
                             "id" => 1,
                             "email" => "usuario1@empresa.com",
@@ -86,14 +86,14 @@ class StageController extends Controller
                     [
                         "id" => 2,
                         "startup" => [
-                            "id" => 1,
+                            "id" => 2,
                             "name" => "Startup B"
                         ],
                         "challenge" => [
                             "id" => 1,
                             "name" => "Desafio A"
                         ],
-                        "score" => 3.6,
+                        "score" => 5.0,
                         "assignee" => [
                             "id" => 1,
                             "email" => "usuario1@empresa.com",
@@ -159,14 +159,14 @@ class StageController extends Controller
                     [
                         "id" => 1,
                         "startup" => [
-                            "id" => 1,
-                            "name" => "Startup A"
+                            "id" => 3,
+                            "name" => "Startup C"
                         ],
                         "challenge" => [
-                            "id" => 1,
-                            "name" => "Desafio B"
+                            "id" => 3,
+                            "name" => "Desafio C"
                         ],
-                        "score" => 3.6,
+                        "score" => 2.0,
                         "assignee" => [
                             "id" => 1,
                             "email" => "usuario1@empresa.com",
@@ -227,13 +227,13 @@ class StageController extends Controller
                         "id" => 2,
                         "startup" => [
                             "id" => 1,
-                            "name" => "Startup B"
+                            "name" => "Startup A"
                         ],
                         "challenge" => [
-                            "id" => 1,
-                            "name" => "Desafio A"
+                            "id" => 2,
+                            "name" => "Desafio B"
                         ],
-                        "score" => 3.6,
+                        "score" => 4.0,
                         "assignee" => [
                             "id" => 1,
                             "email" => "usuario1@empresa.com",
@@ -299,14 +299,14 @@ class StageController extends Controller
                     [
                         "id" => 1,
                         "startup" => [
-                            "id" => 1,
-                            "name" => "Startup A"
+                            "id" => 2,
+                            "name" => "Startup B"
                         ],
                         "challenge" => [
                             "id" => 1,
-                            "name" => "Desafio B"
+                            "name" => "Desafio A"
                         ],
-                        "score" => 3.6,
+                        "score" => 3.0,
                         "assignee" => [
                             "id" => 1,
                             "email" => "usuario1@empresa.com",
@@ -365,9 +365,17 @@ class StageController extends Controller
                     ]
                 ]
             ]
-        ];
+        ]);
 
+        $filtered = $stages->filter(function ($item) use ($filters) {
+            $startupName = $item['applications'][0]['startup']['name'];
+            $score = $item['applications'][0]['score'];
+            $challengeId = $item['applications'][0]['challenge']['id'];
+            return $startupName === $filters['search']
+                && $score === $filters['score']
+                && $challengeId === $filters['challenge_id'];
+        });
 
-        return $stages;
+        return $filtered->values()->all();
     }
 }

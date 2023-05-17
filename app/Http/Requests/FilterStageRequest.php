@@ -23,7 +23,7 @@ class FilterStageRequest extends FormRequest
     {
         return [
             'search' => 'nullable',
-            'challenge' => 'nullable',
+            'challenge_id' => 'nullable',
             'score' => 'nullable'
         ];
     }
