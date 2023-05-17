@@ -3,11 +3,14 @@
 namespace App\Http\Controllers\Api\Stage;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\FilterStageRequest;
 
 class StageController extends Controller
 {
-    public function index()
+    public function index(FilterStageRequest $request)
     {
+        $filters = $request->validated($request);
+
         $stages = [
             [
                 'id' => 1,
@@ -363,6 +366,8 @@ class StageController extends Controller
                 ]
             ]
         ];
+
+
         return $stages;
     }
 }
